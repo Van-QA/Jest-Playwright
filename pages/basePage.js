@@ -1,12 +1,10 @@
 import { baseUrl, timeout } from '../config'
 import { homePageImage } from '../pageobjects/selectors'
-import { Page } from "playwright-core";
 
 export default class basePage {
-	constructor(path, timeout, page) {
+	constructor(path, timeout) {
 		this.path = path
 		this.timeout = timeout
-		this.page = await browser.newPage();
 	}
 
 	async getTitle() {

@@ -1,7 +1,7 @@
-const PlaywrightEnvironment = require('jest-playwright-preset/lib/PlaywrightEnvironment')
+const PlaywrightEnv = require('jest-playwright-preset/lib/PlaywrightEnvironment')
 	.default
 
-class CustomEnv extends PlaywrightEnvironment {
+class CustomEnv extends PlaywrightEnv {
 	async setup() {
 		await super.setup()
 		// Your setup

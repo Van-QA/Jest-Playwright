@@ -10,9 +10,12 @@ import { productCount } from '../pageobjects/selectors'
 // ### 5. Check the Product Count of the Cart
 
 import { test, expect } from '@playwright/test';
+import path from "path";
 
 describe('Add to Cart', function () {
 	beforeAll(async () => {
+		// await page.goto(`file:${path.join(__dirname, 'example.html')}`)
+
 		jest.setTimeout(jestTimeout)
 		await LandingPage.open()
 	})
