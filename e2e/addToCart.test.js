@@ -9,13 +9,8 @@ import { productCount } from '../pageobjects/selectors'
 // ### 4. Verify the message displayed that the product is added to Cart
 // ### 5. Check the Product Count of the Cart
 
-import { test, expect } from '@playwright/test';
-import path from "path";
-
 describe('Add to Cart', function () {
 	beforeAll(async () => {
-		// await page.goto(`file:${path.join(__dirname, 'example.html')}`)
-
 		jest.setTimeout(jestTimeout)
 		await LandingPage.open()
 	})
@@ -26,7 +21,7 @@ describe('Add to Cart', function () {
 		await LandingPage.waitForPageLoad()
 	})
 
-	it('click on 20% discuont listed Item', async () => {
+	it('click on 20% discount listed Item', async () => {
 		await AddToCartPage.printedChiffonDress()
 		await AddToCartPage.clickChiffonDress()
 	})
