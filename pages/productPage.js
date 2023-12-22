@@ -11,7 +11,7 @@ import {
 	numberOfItems,
 	checkout,
 	productPrice,
-} from '../pageobjects/selectors'
+} from '../common/selectors'
 import BasePage from './basePage'
 import AddToCartPage from './addToCartPage'
 

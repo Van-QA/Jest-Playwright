@@ -1,7 +1,8 @@
 import AddToCartPage from '../pages/addToCartPage'
 import LandingPage from '../pages/landingPage'
-import { jestTimeout } from '../config'
-import { productCount } from '../pageobjects/selectors'
+import { jestTimeout } from '../config/constants'
+import { productCount } from '../common/selectors'
+import { addAttach } from 'jest-html-reporters/helper'
 
 // ### 1. Launch the Application
 // ### 2. Select the Product
@@ -39,5 +40,40 @@ describe('Add to Cart', function () {
 	it('Verify the product count from the Cart', async () => {
 		let getProductCount = await AddToCartPage.cartCount()
 		expect(getProductCount).toEqual(productCount)
+	})
+
+	it('Verify the product count from the Cart2', async () => {
+		//Example attach with **string**
+		const { addAttach } = require('jest-html-reporters/helper')
+		const path = require('path')
+		const filePath = path.resolve(__dirname, './test.jpg')
+
+		const fs = require('fs')
+
+		function fileExists(filePath) {
+			try {
+				// Check if the file exists
+				fs.accessSync(filePath, fs.constants.F_OK)
+				return true
+			} catch (err) {
+				// File doesn't exist or other error
+				return false
+			}
+		}
+		if (fileExists(filePath)) {
+			console.log(`Screenshot exists at: ${filePath}`)
+		} else {
+			console.log(`Screenshot does not exist at: ${filePath}`)
+		}
+
+		await addAttach({
+			attach: filePath,
+			description: 'test google 2',
+		})
+		// await addAttach({
+		// 	attach: filePath,
+		// 	description: 'test google 2',
+		// })
+		// expect(1).toBe(2)
 	})
 })

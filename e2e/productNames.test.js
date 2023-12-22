@@ -1,5 +1,5 @@
 import LandingPage from '../pages/landingPage'
-import {jestTimeout} from '../config'
+import {jestTimeout} from '../config/constants'
 
 // ### 1. Launch the Application
 // ### 2. Arrive on the Landing Page

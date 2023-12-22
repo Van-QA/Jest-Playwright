@@ -7,8 +7,8 @@ import {
 	printedDressTwo,
 	printedSummerDress,
 	printedSummerDressTwo,
-} from '../pageobjects/selectors'
-import { baseUrl, timeout } from '../config'
+} from '../common/selectors'
+import { baseUrl, timeout } from '../config/constants'
 
 class LandingPage extends BasePage {
 	constructor() {

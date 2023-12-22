@@ -1,5 +1,5 @@
-import { baseUrl, timeout } from '../config'
-import { homePageImage } from '../pageobjects/selectors'
+import { baseUrl, timeout } from '../config/constants'
+import { homePageImage } from '../common/selectors'
 
 export default class basePage {
 	constructor(path, timeout) {
@@ -25,11 +25,10 @@ export default class basePage {
 
 	//Wait for the Page to Load
 	async waitForPageLoad() {
-		const isVisible = await page.waitForSelector(homePageImage, {
+		return await page.waitForSelector(homePageImage, {
 			timeout: timeout,
 			visible: true,
 		})
-		return isVisible
 	}
 
 	//wait and find a specific element with it's Selector and return Visible

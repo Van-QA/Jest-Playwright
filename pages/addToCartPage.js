@@ -6,7 +6,7 @@ import {
 	closeBtn,
 	itemCount,
 	printedChiffonDress,
-} from '../pageobjects/selectors'
+} from '../common/selectors'
 
 class AddToCartPage extends BasePage {
 	async printedChiffonDress() {

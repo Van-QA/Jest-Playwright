@@ -16,6 +16,17 @@ Install dependencies
 Install Node modules: npm i
 ```
 
+## Globals
+
+- `browserName` <[string]> - name of the current browser (chromium, firefox or webkit)
+- `deviceName` <[string]> - name of the current device
+- `browser` <[[Browser](https://playwright.dev/docs/api/class-browser/)]> - Playwright browser instance
+- `context` <[[Context](https://playwright.dev/docs/api/class-browsercontext/)]> - a new Playwright context instance for each new test file
+- `page` <[[Page](https://playwright.dev/docs/api/class-page/)]> - Playwright page instance (since a new context for every test file also creates a new page for it)
+
+All of them are available globally in each Jest test. If you are using ESLint and JavaScript, its recommend to use it in combination with the [eslint-plugin-jest-playwright](https://github.com/playwright-community/eslint-plugin-jest-playwright).
+
+
 Run test
 
 ```bash
@@ -39,10 +50,10 @@ Folder Structure
     │    ├── toggleProductColour.test.js    # Automated Test Script
     │
     │
-    │── config.js                           # Confiuguration JavaScript File
+    │── constants.js                           # Confiuguration JavaScript File
     │
     │
-    ├── pageobjects                       
+    ├── common                       
     │    ├──selectors.js                    # HTML and CSS identifier for elements to test
     │               
     │

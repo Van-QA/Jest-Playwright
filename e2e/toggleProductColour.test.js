@@ -1,6 +1,6 @@
 import LandingPage from '../pages/landingPage'
 import ProductPage from '../pages/productPage'
-import { jestTimeout } from '../config'
+import { jestTimeout } from '../config/constants'
 import {
 	blackColourImageUpdated,
 	blueColourImageUpdated,
@@ -9,7 +9,7 @@ import {
 	orangeColourImageUpdated,
 	title,
 	yellowColourImageUpdated,
-} from '../pageobjects/selectors'
+} from '../common/selectors'
 
 // ### 1. Launch the Application
 // ### 2. Click on the 5th Product with 5% discount from the list

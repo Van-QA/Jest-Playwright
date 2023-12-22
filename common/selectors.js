@@ -1,7 +1,7 @@
 module.exports = {
   //Locators
   navigateUrl: "http://automationpractice.com/index.php",
-  homePageImage: "div#header_logo",
+  homePageImage: "header:has(#unsplash-home)",
   headerLogo: "#header_logo",
   landingPageTitle: "My Store",
   title: "My Store",
